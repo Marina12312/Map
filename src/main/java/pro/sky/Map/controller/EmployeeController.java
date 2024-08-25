@@ -16,8 +16,9 @@ public class EmployeeController {
     }
 
     @PostMapping("/add")
-    public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName) {
-        return employeeService.addEmployee(firstName, lastName);
+    public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName,
+                                @RequestParam double salary, @RequestParam int departmentId) {
+        return employeeService.addEmployee(firstName, lastName, salary, departmentId );
     }
 
     @DeleteMapping("/remove")
